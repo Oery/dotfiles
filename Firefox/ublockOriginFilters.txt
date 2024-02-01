@@ -1,0 +1,106 @@
+! 2023-10-26 https://dashboard.twitch.tv
+dashboard.twitch.tv##.dac7-banner.hdha-DM.Layout-sc-1xcs6mc-0
+
+! 2023-10-26 https://www.youtube.com
+www.youtube.com##.ytd-rich-section-renderer.style-scope > .ytd-rich-shelf-renderer.style-scope
+www.youtube.com##ytd-mini-guide-entry-renderer.ytd-mini-guide-renderer.style-scope:nth-of-type(2)
+
+! 2023-10-29 https://twitter.com
+twitter.com##.r-1f1sjgu.r-ymttw5.r-uaa2di.r-eqz5dr.r-1habvwh.css-1dbjc4n
+
+! 2023-11-05 https://www.twitch.tv
+www.twitch.tv##.hatIYF.Layout-sc-1xcs6mc-0 > div > .kBtJDm.InjectLayout-sc-1i43xsx-0 > .cegTsp.bTXTVH.ScCoreButtonSecondary-sc-ocjdkq-2.ScCoreButton-sc-ocjdkq-0
+
+! 2023-11-08 https://www.youtube.com
+www.youtube.com##.ytd-reel-shelf-renderer.style-scope > .yt-horizontal-list-renderer.style-scope
+www.youtube.com##.ytd-item-section-renderer.style-scope > .ytd-reel-shelf-renderer.style-scope
+
+! 2023-11-10 https://www.thegamer.com
+www.thegamer.com##.user-content.w-login-banner
+
+! 2023-11-22 https://twitter.com
+twitter.com##.r-1f1sjgu.r-ymttw5.r-uaa2di.r-eqz5dr.r-1habvwh.css-175oi2r
+
+! 2023-11-22 https://fr.namemc.com
+fr.namemc.com##div.col-12:nth-of-type(8)
+
+! 2023-12-16 https://www.twitch.tv
+www.twitch.tv##.kBEymU.Layout-sc-1xcs6mc-0 > .hatIYF.Layout-sc-1xcs6mc-0 > div > .kBtJDm.InjectLayout-sc-1i43xsx-0 > .eSFFfM.ScButtonIcon-sc-9yap0r-0.bTXTVH.ScCoreButton-sc-ocjdkq-0
+www.twitch.tv##.hKEeil.Layout-sc-1xcs6mc-0 > .hatIYF.Layout-sc-1xcs6mc-0 > div > .kBtJDm.InjectLayout-sc-1i43xsx-0 > .eSFFfM.ScButtonIcon-sc-9yap0r-0.bTXTVH.ScCoreButton-sc-ocjdkq-0
+
+! 2023-12-21 https://next-auth.js.org
+||next-auth.js.org/img/clerk-sidebar-*.png$image
+
+! 2024-01-09 https://twitter.com
+twitter.com##div.r-14wv3jr.r-g2wdr4.r-1udh08x.r-1ifxtd0.r-rs99b7.r-1phboty.r-1867qdf.css-175oi2r > .css-175oi2r
+twitter.com##div.r-14wv3jr.r-g2wdr4.r-1udh08x.r-1ifxtd0.r-rs99b7.r-1phboty.r-1867qdf.css-175oi2r
+twitter.com##.r-ymttw5.r-1w6e6rj.r-18u37iz.css-175oi2r
+
+! Title: Hide YouTube Shorts
+! Description: Hide all traces of YouTube shorts videos on YouTube
+! Version: 1.8.0
+! Last modified: 2023-01-08 20:02
+! Expires: 2 weeks (update frequency)
+! Homepage: https://github.com/gijsdev/ublock-hide-yt-shorts
+! License: https://github.com/gijsdev/ublock-hide-yt-shorts/blob/master/LICENSE.md
+
+! Hide all videos containing the phrase "#shorts"
+youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#shorts))
+youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#Shorts))
+youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#short))
+youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#Short))
+
+! Hide all videos with the shorts indicator on the thumbnail
+youtube.com##ytd-grid-video-renderer:has([overlay-style="SHORTS"])
+youtube.com##ytd-rich-item-renderer:has([overlay-style="SHORTS"])
+youtube.com##ytd-video-renderer:has([overlay-style="SHORTS"])
+youtube.com##ytd-item-section-renderer.ytd-section-list-renderer[page-subtype="subscriptions"]:has(ytd-video-renderer:has([overlay-style="SHORTS"]))
+
+! Hide shorts button in sidebar
+youtube.com##ytd-guide-entry-renderer:has-text(Shorts)
+youtube.com##ytd-mini-guide-entry-renderer:has-text(Shorts)
+
+! Hide shorts section on homepage
+youtube.com##ytd-rich-section-renderer:has(#rich-shelf-header:has-text(Shorts))
+youtube.com##ytd-reel-shelf-renderer:has(.ytd-reel-shelf-renderer:has-text(Shorts))
+
+! Hide shorts tab on channel pages
+! Old style
+youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
+! New style (2023-10)
+youtube.com##yt-tab-shape:has-text(/^Shorts$/)
+
+! Hide shorts in video descriptions
+youtube.com##ytd-reel-shelf-renderer.ytd-structured-description-content-renderer:has-text("Shorts remixing this video")
+
+! Remove empty spaces in grid
+youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
+
+
+!!! MOBILE !!!
+
+! Hide all videos in home feed containing the phrase "#shorts"
+m.youtube.com##ytm-rich-item-renderer:has(#video-title:has-text(#shorts))
+m.youtube.com##ytm-rich-item-renderer:has(#video-title:has-text(#Shorts))
+m.youtube.com##ytm-rich-item-renderer:has(#video-title:has-text(#short))
+m.youtube.com##ytm-rich-item-renderer:has(#video-title:has-text(#Short))
+
+! Hide all videos in subscription feed containing the phrase "#shorts"
+m.youtube.com##ytm-item-section-renderer:has(#video-title:has-text(#shorts))
+m.youtube.com##ytm-item-section-renderer:has(#video-title:has-text(#Shorts))
+m.youtube.com##ytm-item-section-renderer:has(#video-title:has-text(#short))
+m.youtube.com##ytm-item-section-renderer:has(#video-title:has-text(#Short))
+
+! Hide shorts button in the bottom navigation bar
+m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
+
+! Hide all videos with the shorts indicator on the thumbnail
+m.youtube.com##ytm-video-with-context-renderer:has([data-style="SHORTS"])
+
+! Hide shorts sections
+m.youtube.com##ytm-rich-section-renderer:has(ytm-reel-shelf-renderer:has(.reel-shelf-title-wrapper:has-text(Shorts)))
+m.youtube.com##ytm-reel-shelf-renderer.item:has(.reel-shelf-title-wrapper:has-text(Shorts))
+
+! Hide shorts tab on channel pages
+m.youtube.com##.single-column-browse-results-tabs>a:has-text(Shorts)
+
