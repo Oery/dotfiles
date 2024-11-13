@@ -49,16 +49,8 @@
         "terminal",
         "shell",
         "physicalmemory",
-        "btrfs",
         "zpool",
-        {
-            "type": "battery",
-            "temp": true
-        },
         "poweradapter",
-        "bluetooth",
-        "bluetoothradio",
-        "camera",
         "gamepad",
         "break",
         {
