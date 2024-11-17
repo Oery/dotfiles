@@ -43,7 +43,10 @@
             "type": "display",
             "compactType": "original-with-refresh-rate"
         },
-        "wm",
+        {
+            "type": "wm",
+            "format": "{2}"
+        },
         "packages",
         "theme",
         "terminal",
