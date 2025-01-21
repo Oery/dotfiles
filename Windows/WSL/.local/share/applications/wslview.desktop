@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=WSLView
+Exec=wslview %U
+Type=Application
+NoDisplay=true
+MimeType=x-scheme-handler/http;x-scheme-handler/https;

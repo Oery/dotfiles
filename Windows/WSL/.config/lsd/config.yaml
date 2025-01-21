@@ -1,0 +1,41 @@
+classic: false
+blocks:
+  - permission
+  - user
+  - group
+  - size
+  - date
+  - name
+
+color:
+  when: auto
+  theme: default
+
+date: date
+
+dereference: false
+
+icons:
+  when: auto
+  theme: fancy
+  separator: ' '
+
+indicators: false
+layout: grid
+
+recursion:
+  enabled: false
+  depth: 3
+
+size: default
+
+sorting:
+  column: extension
+  reverse: false
+  dir-grouping: first
+
+no-symlink: false
+total-size: false
+hyperlink: never
+
+header: false
