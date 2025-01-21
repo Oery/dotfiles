@@ -1,0 +1,107 @@
+// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
+$theme_fg_color: '@theme_fg_color';
+$theme_bg_color: '@theme_bg_color';
+
+@use 'colors' as colors;
+
+// Window
+window.Bar {
+	// color: #{$theme_bg_color};
+	color: rgb(255 255 255 / 80%);
+	background: transparent;
+	font-weight: bold;
+	font-family: 'JetBrains Mono';
+	font-size: 14px;
+
+	// Actual Bar
+	> centerbox,
+	> box {
+		// background: #{$theme_bg_color};
+		// background: rgba(255, 255, 255, 0.6);
+		margin-top: 10px;
+
+		margin-left: 400px;
+		margin-right: 400px;
+
+		background: colors.$background;
+		border-radius: 4px;
+		padding: 4px;
+	}
+
+	.workspaces {
+		button {
+			all: unset;
+			color: rgb(255 255 255 / 50%);
+			background: rgb(255 255 255 / 5%);
+			border-radius: 1px;
+
+			padding: 4px 8px;
+
+			margin-left: 2px;
+			margin-right: 4px;
+			font-weight: 500;
+		}
+
+		.focused {
+			color: rgb(255 255 255 / 100%);
+		}
+
+		:hover {
+			color: rgb(255 255 255 / 100%);
+		}
+	}
+
+	.Media {
+		font-weight: 400;
+	}
+
+	.systray {
+		button {
+			background: none;
+		}
+	}
+
+	.MicMute {
+		margin-left: 10px;
+	}
+
+	.Time {
+		margin-left: 10px;
+		font-weight: 700;
+		padding-right: 16px;
+	}
+}
+
+window.VolumeIndicator {
+	background: rgba(39, 39, 39, 0.6);
+	border-radius: 10px;
+	padding: 10px;
+	border: 1px solid rgb(59, 59, 59);
+
+	icon {
+		color: white;
+	}
+
+	label {
+		color: white;
+		font-weight: bold;
+	}
+}
+
+window.Launcher {
+	background: transparent;
+	font-family: 'JetBrains Mono';
+
+	> box {
+		background: colors.$background;
+	}
+
+	.AppList {
+		padding-top: 10px;
+	}
+
+	.App,
+	.search {
+		background: rgb(255 255 255 / 5%);
+	}
+}

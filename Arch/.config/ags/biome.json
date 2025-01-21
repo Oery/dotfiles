@@ -1,0 +1,17 @@
+{
+	"linter": {
+		"rules": {
+			"a11y": {
+				"useButtonType": "off",
+				"noLabelWithoutControl": "off",
+				"useKeyWithClickEvents": "off"
+			},
+			"correctness": {
+				"useJsxKeyInIterable": "off"
+			},
+			"style": {
+				"noNonNullAssertion": "off"
+			}
+		}
+	}
+}
