@@ -143,16 +143,6 @@ keybindings:
   - commands: ['move --direction down']
     bindings: ['lwin+shift+j', 'lwin+shift+down']
 
-  # Resize focused window by a percentage or pixel amount.
-  - commands: ['resize --width -2%']
-    bindings: ['lwin+u']
-  - commands: ['resize --width +2%']
-    bindings: ['lwin+p']
-  - commands: ['resize --height +2%']
-    bindings: ['lwin+o']
-  - commands: ['resize --height -2%']
-    bindings: ['lwin+i']
-
   - commands: ['wm-enable-binding-mode --name resize']
     bindings: ['alt+r']
 
