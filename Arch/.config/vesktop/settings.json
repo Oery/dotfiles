@@ -1,0 +1,14 @@
+{
+    "discordBranch": "stable",
+    "minimizeToTray": true,
+    "arRPC": true,
+    "splashColor": "oklch(0.8 0 0)",
+    "splashBackground": "oklch(0.19 0 0)",
+    "disableMinSize": true,
+    "splashTheming": false,
+    "hardwareAcceleration": false,
+    "spellCheckLanguages": [
+        "en-US",
+        "en"
+    ]
+}
