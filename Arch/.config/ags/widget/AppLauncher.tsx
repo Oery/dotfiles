@@ -45,7 +45,7 @@ function AppButton({ app }: { app: Apps.Application }) {
 			}}
 		>
 			<box>
-				<icon icon={app.iconName} />
+				<icon icon={app.iconName} valign={Gtk.Align.START} />
 				<box valign={Gtk.Align.CENTER} vertical>
 					<label className='name' truncate xalign={0} label={app.name} />
 					{app.description && (

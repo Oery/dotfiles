@@ -6,7 +6,6 @@ $theme_bg_color: '@theme_bg_color';
 
 // Window
 window.Bar {
-	// color: #{$theme_bg_color};
 	color: rgb(255 255 255 / 80%);
 	background: transparent;
 	font-weight: bold;
@@ -16,7 +15,6 @@ window.Bar {
 	// Actual Bar
 	> centerbox,
 	> box {
-		// background: #{$theme_bg_color};
 		// background: rgba(255, 255, 255, 0.6);
 		margin-top: 10px;
 
@@ -103,5 +101,33 @@ window.Launcher {
 	.App,
 	.search {
 		background: rgb(255 255 255 / 5%);
+	}
+
+	* {
+		outline-color: colors.$accent;
+	}
+
+	button {
+		icon {
+			margin-right: 20px;
+		}
+
+		.name {
+			font-size: 14px;
+		}
+
+		.description {
+			font-size: 10px;
+			color: rgba(255, 255, 255, 0.4);
+			margin-top: 5px;
+		}
+	}
+
+	.not-found {
+		margin-top: 100px;
+
+		label {
+			margin-top: 10px;
+		}
 	}
 }
