@@ -1,1 +1,4 @@
 theme = "base16_transparent"
+
+[keys.normal]
+"#" = "toggle_comments"
