@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url(https://seele1306.github.io/Snippets/BetterProfiles/import.css);
 :root {
-    --test-color: hsl(250, 45%, 45%);
+    /* --test-color: hsl(250, 45%, 45%); */
     --section-thickness: 1px; /* must be in pixels */
     --profile-accent-color: 250deg 45% 45%;
     --profile-transparency: 25%;
@@ -60,12 +60,15 @@ badgeContainer-
 /* DISCORD ADVERTISING */
 [href='/store'] {display:none}
 
-/* Profile Effects */
 [class*="profileEffects"] {
   display:none;
 }
 
-/* .container__10dc7, .header__60bef, .scrollerContainer_bf5dbd .container__7590f {
+[class^="avatarDecoration"] img {
+  display: none;
+}
+
+.container__10dc7, .header__60bef, .scrollerContainer_bf5dbd .container__7590f {
   background-color: var(--background-primary) !important;
 }
 
@@ -73,12 +76,26 @@ badgeContainer-
   max-height: calc(100vh - 100px);
 }
 
-[class^="avatarDecoration"] img {
-  display: none;
-}
-
 [href='/shop'] {display: none;}
 
 .wrapper_c721cc {
   display: none;
-} */
+}
+
+/* Hide nameplates */
+[style^="background: linear-gradient(90deg"]:has([src*="/nameplates/"]) { display: none; }
+[class*="dm_"]:has([class*="linkPlated_"]) {
+    & [class*="linkPlated_"] { padding-right: var(--space-16); }
+    & [class*="closeButtonPlated_"] {
+        opacity: 0.7;
+        &:hover { opacity: 1; }
+        & [class^="innerCloseButtonPlated"] {
+            opacity: unset; 
+            background: none;
+            & svg {
+                color: inherit;
+                &:is(:hover, :focus-within) { color: var(--interactive-hover); }
+            }
+        }
+    }
+}
