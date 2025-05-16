@@ -1,22 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-@import url(https://seele1306.github.io/Snippets/BetterProfiles/import.css);
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); */
+/* @import url(https://seele1306.github.io/Snippets/BetterProfiles/import.css); */
 :root {
-    /* --test-color: hsl(250, 45%, 45%); */
-    --section-thickness: 1px; /* must be in pixels */
-    --profile-accent-color: 250deg 45% 45%;
-    --profile-transparency: 25%;
-    --font-primary: "DejaVu Sans Mono";
-    --font-display: "DejaVu Sans Mono";
-    /* --font-primary: "Quicksand"; */
-    /* --font-display: "Quicksand"; */
+	/* --test-color: hsl(250, 45%, 45%); */
+	--section-thickness: 1px; /* must be in pixels */
+	--profile-accent-color: 250deg 45% 45%;
+	--profile-transparency: 25%;
+	/* --font-primary: 'DejaVu Sans Mono';
+	--font-display: 'DejaVu Sans Mono'; */
+	/* --font-primary: "Quicksand";
+	--font-display: "Quicksand"; */
+
+	/* --font-primary: "JetBrains Mono"; */
+	/* --font-display: "JetBrains Mono"; */
+}
+
+.visual-refresh body {
+	background-color: #121517E5 !important;
 }
 
 /*
 nitroTabBadgeContainer-
 badgeContainer-
 */
-[class*="badgeContainer-"]:has([class*="bogoTrialBadge-"]) {
-    display: none;
+[class*='badgeContainer-']:has([class*='bogoTrialBadge-']) {
+	display: none;
 }
 
 /* .panels-3wFtMD .container-YkUktl .flex-2S1XBF {
@@ -57,45 +64,133 @@ badgeContainer-
   transition: rotate 0.3s;
 } */
 
-/* DISCORD ADVERTISING */
-[href='/store'] {display:none}
-
-[class*="profileEffects"] {
-  display:none;
+/* Hide Nitro Button */
+[href='/store'] {
+	display: none;
 }
 
-[class^="avatarDecoration"] img {
-  display: none;
+/* Hide Store Button */
+[href='/shop'] {
+	display: none;
 }
 
-.container__10dc7, .header__60bef, .scrollerContainer_bf5dbd .container__7590f {
-  background-color: var(--background-primary) !important;
+/* Hide Profile Effects */
+[class*='profileEffects'],
+[class*='avatarDecoration'] {
+	display: none;
+}
+
+/* Hide Clan Tags */
+[class*='clanTag'],
+[class*='chipletContainer'] {
+	display: none;
+}
+[class*='chipletContainerInner_']:has([src*='/clan-badges/']) {
+	display: none;
+}
+
+[class$='custom-theme-background custom-user-profile-theme'] {
+	--profile-gradient-primary-color: var(--background-surface-high) !important;
+	--profile-gradient-secondary-color: var(--background-surface-high) !important;
+	--profile-gradient-overlay-color: rgba(0, 0, 0, 0) !important;
+	--profile-gradient-button-color: var(--background-mod-subtle) !important;
+	--theme-base-color-light-hsl: unset !important;
+	--theme-base-color-light: unset !important;
+	--theme-text-color-light: unset !important;
+	--theme-base-color-dark-hsl: unset !important;
+	--theme-base-color-dark: unset !important;
+	--theme-text-color-dark: unset !important;
+	--theme-base-color-amount: unset !important;
+	--theme-text-color-amount: unset !important;
+}
+
+.container__10dc7,
+.header__60bef,
+.scrollerContainer_bf5dbd .container__7590f {
+	background-color: var(--background-primary) !important;
 }
 
 .userPopoutInner_f545a3 {
-  max-height: calc(100vh - 100px);
+	max-height: calc(100vh - 100px);
 }
 
-[href='/shop'] {display: none;}
-
 .wrapper_c721cc {
-  display: none;
+	display: none;
 }
 
 /* Hide nameplates */
-[style^="background: linear-gradient(90deg"]:has([src*="/nameplates/"]) { display: none; }
-[class*="dm_"]:has([class*="linkPlated_"]) {
-    & [class*="linkPlated_"] { padding-right: var(--space-16); }
-    & [class*="closeButtonPlated_"] {
-        opacity: 0.7;
-        &:hover { opacity: 1; }
-        & [class^="innerCloseButtonPlated"] {
-            opacity: unset; 
-            background: none;
-            & svg {
-                color: inherit;
-                &:is(:hover, :focus-within) { color: var(--interactive-hover); }
-            }
-        }
-    }
+[style^='background: linear-gradient(90deg']:has([src*='/nameplates/']) {
+	display: none;
+}
+/* [class*='dm_']:has([class*='linkPlated_']) {
+	& [class*='linkPlated_'] {
+		padding-right: var(--space-16);
+	}
+	& [class*='closeButtonPlated_'] {
+		opacity: 0.7;
+		&:hover {
+			opacity: 1;
+		}
+		& [class^='innerCloseButtonPlated'] {
+			opacity: unset;
+			background: none;
+			& svg {
+				color: inherit;
+				&:is(:hover, :focus-within) {
+					color: var(--interactive-hover);
+				}
+			}
+		}
+	}
+} */
+
+[aria-label="Resize Sidebar"] {
+	display: none !important;
+}
+
+* {
+	border: none !important;
+}
+
+::-webkit-scrollbar {
+    display: none !important;
+}
+
+/* Capitalize Channel Names */
+[aria-label="Channels"] {
+	text-transform: capitalize !important;
+}
+
+/* Remove Channels and DMs Background */
+div:has([aria-label="Channels"]),
+div:has([aria-label="Private channels"]) {
+	backdrop-filter: none !important;
+}
+
+/* Member List Activities */
+.visual-refresh .container__0f2e8 {
+	background: none !important;
+}
+
+/* Skeleton */
+.visual-refresh .wrapper_d852db,
+.visual-refresh .wrapper_fc8177 {
+	background: none !important;
+}
+
+.members_c8ffbb,
+.container_c8ffbb {
+	background-color: transparent !important;   
+	background: none !important;   
+	box-shadow: none !important;   
+}
+
+/* Date avant nouveaux messages*/
+.content__908e2 {
+	background: none !important;
+}
+
+/* Background Member in Member List */
+.member_c8ffbb {
+	background: none !important;
 }
