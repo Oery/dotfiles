@@ -1,0 +1,38 @@
+command = /usr/bin/fish --login --interactive
+
+gtk-single-instance = true
+quit-after-last-window-closed = false
+
+resize-overlay = never
+mouse-hide-while-typing = true
+
+cursor-style = underline
+shell-integration-features = no-cursor
+
+# Theme
+background = #121517
+background-opacity = 0.9
+
+foreground = #F7F1FF
+cursor-color = #F7F1FF
+
+selection-foreground = #121517
+selection-background = #F7F1FF
+
+palette = 0=#51576d
+palette = 1=#e78284
+palette = 2=#a6d189
+palette = 3=#e5c890
+palette = 4=#7E7D7E
+palette = 5=#F7F1FF
+palette = 6=#F7F1FF
+palette = 7=#F7F1FF
+palette = 8=#626880
+palette = 9=#e67172
+palette = 10=#8ec772
+palette = 11=#d9ba73
+palette = 12=#7b9ef0
+palette = 13=#f2a4db
+palette = 14=#5abfb5
+palette = 15=#b5bfe2
+
