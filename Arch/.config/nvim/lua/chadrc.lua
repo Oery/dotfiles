@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "hollow",
+  theme = "renoir",
   transparency = true,
 
   hl_override = {
@@ -51,6 +51,10 @@ M.term = {
   sizes = {
     vsp = 0.3,
   },
+}
+
+M.ui.statusline = {
+  theme = "vscode",
 }
 
 return M
