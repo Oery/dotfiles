@@ -1,3 +1,5 @@
+local colors = require("base46").get_theme_tb "base_30"
+
 return {
   { -- Code Formatter
     "stevearc/conform.nvim",
@@ -146,4 +148,20 @@ return {
     },
   },
 
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    lazy = false,
+    opts = {
+      TODO = {
+        color = "info",
+      },
+      colors = {
+        info = { colors.white },
+        error = { colors.red },
+        warning = { colors.orange },
+        hint = { colors.light_grey },
+      },
+    },
+  },
 }

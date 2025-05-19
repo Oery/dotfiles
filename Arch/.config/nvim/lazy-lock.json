@@ -32,6 +32,7 @@
   "telescope-repo.nvim": { "branch": "master", "commit": "a5395a4bf0fd742cc46b4e8c50e657062f548ba9" },
   "telescope-ui-select.nvim": { "branch": "master", "commit": "6e51d7da30bd139a6950adf2a47fda6df9fa06d2" },
   "telescope.nvim": { "branch": "master", "commit": "a4ed82509cecc56df1c7138920a1aeaf246c0ac5" },
+  "todo-comments.nvim": { "branch": "main", "commit": "304a8d204ee787d2544d8bc23cd38d2f929e7cc5" },
   "typescript-tools.nvim": { "branch": "master", "commit": "a4109c70e7d6a3a86f971cefea04ab6720582ba9" },
   "ui": { "branch": "v3.0", "commit": "e7d93059132eaf51b243cee1d5f89e98ecb359ea" },
   "vim-wakatime": { "branch": "master", "commit": "e46d7c4f98ee0f40782008dd60cb2a79c377fb1d" },
