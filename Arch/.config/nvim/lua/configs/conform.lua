@@ -7,6 +7,7 @@ local options = {
     html = { "biome" },
     jsx = { "biome" },
     tsx = { "biome" },
+    c = { "clang-format" },
   },
 
   format_on_save = {
