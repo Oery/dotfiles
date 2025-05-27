@@ -1,5 +1,6 @@
 -- load defaults i.e lua_lsp
 require("nvchad.configs.lspconfig").defaults()
+require "nvchad.options"
 
 local lspconfig = require "lspconfig"
 
@@ -15,6 +16,8 @@ for _, lsp in ipairs(servers) do
     single_file_support = true,
   }
 end
+
+vim.diagnostic.config { virtual_text = false }
 
 -- configuring single server, example: typescript
 -- lspconfig.ts_ls.setup {

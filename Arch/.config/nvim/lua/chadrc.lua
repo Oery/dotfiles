@@ -57,4 +57,8 @@ M.ui.statusline = {
   theme = "vscode",
 }
 
+M.lsp = {
+  signature = true,
+}
+
 return M

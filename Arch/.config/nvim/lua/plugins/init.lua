@@ -14,6 +14,68 @@ return {
     end,
   },
 
+  { import = "nvchad.blink.lazyspec" },
+
+  {
+    "rachartier/tiny-inline-diagnostic.nvim",
+    event = "VeryLazy",
+    priority = 1000,
+    config = function()
+      require("tiny-inline-diagnostic").setup {
+        preset = "classic",
+        transparent_bg = true,
+
+        options = {
+          multilines = {
+            enabled = true,
+            always_show = true,
+          },
+          use_icons_from_diagnostic = true,
+          show_all_diags_on_cursorline = false,
+        },
+      }
+    end,
+  },
+
+  {
+    "folke/trouble.nvim",
+    event = "LspAttach",
+    opts = {},
+    cmd = "Trouble",
+    keys = {
+      {
+        "<leader>xx",
+        "<cmd>Trouble diagnostics toggle<cr>",
+        desc = "Diagnostics (Trouble)",
+      },
+      {
+        "<leader>xX",
+        "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+        desc = "Buffer Diagnostics (Trouble)",
+      },
+      {
+        "<leader>cs",
+        "<cmd>Trouble symbols toggle focus=false<cr>",
+        desc = "Symbols (Trouble)",
+      },
+      {
+        "<leader>cl",
+        "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+        desc = "LSP Definitions / references / ... (Trouble)",
+      },
+      {
+        "<leader>xL",
+        "<cmd>Trouble loclist toggle<cr>",
+        desc = "Location List (Trouble)",
+      },
+      {
+        "<leader>xQ",
+        "<cmd>Trouble qflist toggle<cr>",
+        desc = "Quickfix List (Trouble)",
+      },
+    },
+  },
+
   {
     "mrcjkb/rustaceanvim",
     lazy = false,
@@ -132,6 +194,12 @@ return {
   },
 
   {
+    "folke/which-key.nvim",
+    lazy = false,
+    opts = {},
+  },
+
+  {
     "lukas-reineke/indent-blankline.nvim",
     opts = {
       scope = {
@@ -163,5 +231,11 @@ return {
         hint = { colors.light_grey },
       },
     },
+  },
+
+  {
+    "nmac427/guess-indent.nvim",
+    lazy = false,
+    opts = {},
   },
 }
