@@ -179,6 +179,11 @@ M.polish_hl = {
     csBraces = { fg = M.base_30.light_grey },
     csParens = { fg = M.base_30.light_grey },
     csType = { fg = M.base_30.light_grey },
+
+    DiagnosticInfo = { fg = M.base_30.white },
+    DiagnosticHint = { fg = "#FFEE8C" },
+    DiagnosticWarn = { fg = M.base_30.orange },
+    DiagnosticError = { fg = M.base_30.red },
   },
 
   devicons = {
@@ -198,6 +203,9 @@ M.polish_hl = {
 
   tbline = {
     TbBufOnClose = { fg = M.base_30.white },
+    TbBufOffModified = { fg = M.base_30.white },
+    Tabline = { bg = "" },
+    TbFill = { bg = "" },
   },
 
   -- St_Lsp = { fg = "#FFEE8C" },
